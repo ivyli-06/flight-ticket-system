@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FlightSearchWindow</class>
+ <widget class="QWidget" name="FlightSearchWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>894</width>
+    <height>398</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>航班查询</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelDeparture">
+     <property name="text">
+      <string>出发地:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditDeparture"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelDestination">
+     <property name="text">
+      <string>目的地:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditDestination"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelDate">
+     <property name="text">
+      <string>日期:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="dateTime">
+      <datetime>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2025</year>
+       <month>11</month>
+       <day>30</day>
+      </datetime>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButtonSearch">
+     <property name="text">
+      <string>查询航班</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidgetResults">
+     <column>
+      <property name="text">
+       <string>航班号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>到达时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>目的地</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>起飞时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>到达时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>价格</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>剩余座位</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>立即订票</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

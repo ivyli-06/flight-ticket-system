@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminWindow</class>
+ <widget class="QWidget" name="AdminWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1260</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>管理员管理系统</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabFlight">
+      <attribute name="title">
+       <string>航班管理</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>查询条件</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>航班号：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="leQueryFlightNum"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>出发地：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="leQueryDeparture"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>目的地：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="leQueryArrival"/>
+          </item>
+          <item row="0" column="6">
+           <widget class="QPushButton" name="btnFlightQuery">
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>航班信息</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>航班号：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="leFlightNum"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>出发地：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="leDeparture"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>目的地：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="leArrival"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>出发时间：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDateTimeEdit" name="dtDeparture">
+            <property name="dateTime">
+             <datetime>
+              <hour>0</hour>
+              <minute>0</minute>
+              <second>0</second>
+              <year>2026</year>
+              <month>1</month>
+              <day>1</day>
+             </datetime>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>到达时间：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QDateTimeEdit" name="dtArrival">
+            <property name="dateTime">
+             <datetime>
+              <hour>0</hour>
+              <minute>0</minute>
+              <second>0</second>
+              <year>2026</year>
+              <month>1</month>
+              <day>1</day>
+             </datetime>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>总座位数：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QSpinBox" name="sbTotalSeats">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>500</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>可用座位数：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSpinBox" name="sbAvailableSeats">
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>500</number>
+            </property>
+            <property name="value">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>价格：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QDoubleSpinBox" name="dsPrice">
+            <property name="decimals">
+             <number>2</number>
+            </property>
+            <property name="minimum">
+             <double>100.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>9999.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>1000.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>状态：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QComboBox" name="cbFlightStatus"/>
+          </item>
+          <item row="2" column="6">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QPushButton" name="btnFlightAdd">
+              <property name="text">
+               <string>新增</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnFlightEdit">
+              <property name="text">
+               <string>修改</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnFlightDelete">
+              <property name="text">
+               <string>删除</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableFlights"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabUser">
+      <attribute name="title">
+       <string>用户管理</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>查询条件</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>用户名：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="leQueryUsername"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>邮箱：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="leQueryEmail"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>角色：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QComboBox" name="cbQueryUserRole"/>
+          </item>
+          <item row="0" column="6">
+           <widget class="QPushButton" name="btnUserQuery">
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>用户信息</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="6">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QPushButton" name="btnUserEdit">
+              <property name="text">
+               <string>修改信息</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnUserResetPwd">
+              <property name="text">
+               <string>重置密码</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="leUsername"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>用户名：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>邮箱：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="leEmail"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>角色：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QComboBox" name="cbUserRole"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableUsers"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabOrder">
+      <attribute name="title">
+       <string>订单管理</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
+          <string>查询条件</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>用户ID：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="leQueryUserId"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_20">
+            <property name="text">
+             <string>航班ID：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="leQueryFlightId"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_21">
+            <property name="text">
+             <string>乘客姓名：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="leQueryPassenger"/>
+          </item>
+          <item row="0" column="6">
+           <widget class="QPushButton" name="btnOrderQuery">
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
+          <string>订单信息</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_22">
+            <property name="text">
+             <string>用户ID：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="leUserId"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_23">
+            <property name="text">
+             <string>航班ID：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="leFlightId"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_24">
+            <property name="text">
+             <string>乘客姓名：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="lePassenger"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>身份证号：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="leIdCard"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>座位数：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QSpinBox" name="sbSeatCount">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>总金额：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QDoubleSpinBox" name="dsTotalAmount">
+            <property name="decimals">
+             <number>2</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>99999.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="6">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_28">
+              <property name="text">
+               <string>状态：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbOrderStatus"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnOrderEdit">
+              <property name="text">
+               <string>修改状态</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableOrders"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>leQueryFlightNum</tabstop>
+  <tabstop>leQueryDeparture</tabstop>
+  <tabstop>leQueryArrival</tabstop>
+  <tabstop>btnFlightQuery</tabstop>
+  <tabstop>dtDeparture</tabstop>
+  <tabstop>dtArrival</tabstop>
+  <tabstop>sbTotalSeats</tabstop>
+  <tabstop>sbAvailableSeats</tabstop>
+  <tabstop>dsPrice</tabstop>
+  <tabstop>cbFlightStatus</tabstop>
+  <tabstop>btnFlightAdd</tabstop>
+  <tabstop>btnFlightEdit</tabstop>
+  <tabstop>btnFlightDelete</tabstop>
+  <tabstop>tableFlights</tabstop>
+  <tabstop>leQueryUsername</tabstop>
+  <tabstop>leQueryEmail</tabstop>
+  <tabstop>cbQueryUserRole</tabstop>
+  <tabstop>btnUserQuery</tabstop>
+  <tabstop>btnUserEdit</tabstop>
+  <tabstop>btnUserResetPwd</tabstop>
+  <tabstop>tableUsers</tabstop>
+  <tabstop>leQueryUserId</tabstop>
+  <tabstop>leQueryFlightId</tabstop>
+  <tabstop>leQueryPassenger</tabstop>
+  <tabstop>btnOrderQuery</tabstop>
+  <tabstop>leIdCard</tabstop>
+  <tabstop>sbSeatCount</tabstop>
+  <tabstop>dsTotalAmount</tabstop>
+  <tabstop>cbOrderStatus</tabstop>
+  <tabstop>btnOrderEdit</tabstop>
+  <tabstop>tableOrders</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

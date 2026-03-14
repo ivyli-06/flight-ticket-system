@@ -1,0 +1,91 @@
+# =========================
+# Build directories (common Qt/CMake patterns)
+# =========================
+build/
+build-*/
+cmake-build-*/
+out/
+bin/
+lib/
+
+# =========================
+# CMake generated files
+# =========================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+CMakeDoxyfile.in
+compile_commands.json
+
+# CMake presets user/local overrides
+CMakeUserPresets.json
+
+# =========================
+# Ninja / Make / NMake
+# =========================
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+Makefile
+
+# =========================
+# Qt Creator / Qt tools
+# =========================
+*.user
+*.user.*
+*.pro.user*
+*.qmlc
+*.jsc
+.moc/
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# =========================
+# MSVC / Visual Studio
+# =========================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MSBuild outputs
+Debug/
+Release/
+x64/
+Win32/
+
+# Intermediate & object files
+*.obj
+*.pdb
+*.ipdb
+*.iobj
+*.ilk
+*.pch
+*.tlog
+*.log
+
+# Binaries / libraries
+*.exe
+*.dll
+*.lib
+*.exp
+
+# =========================
+# General
+# =========================
+*.tmp
+*.bak
+*.swp
+*.swo
+*.autosave
+Thumbs.db
+
+# =========================
+# Optional: keep empty dirs (if you use them)
+# =========================
+# !.gitkeep
